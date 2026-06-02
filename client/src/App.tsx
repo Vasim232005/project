@@ -27,7 +27,7 @@ export const App: React.FC = () => {
       setLoading(true);
       setError(null);
       try {
-          const API_URL = process.env.REACT_APP_API_URL || 'https://your-backend-name.onrender.com';
+          const API_URL = process.env.REACT_APP_API_URL || 'https://project-back-bffu.onrender.com';
         if (!res.ok) {
           throw new Error(`HTTP ${res.status}`);
         }
