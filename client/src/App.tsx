@@ -28,6 +28,7 @@ export const App: React.FC = () => {
       setError(null);
       try {
           const API_URL = process.env.REACT_APP_API_URL || 'https://project-back-bffu.onrender.com';
+          const res = await fetch(`${API_URL}/orders`);
         if (!res.ok) {
           throw new Error(`HTTP ${res.status}`);
         }
