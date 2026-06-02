@@ -27,7 +27,7 @@ export const App: React.FC = () => {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch('http://localhost:3001/api/orders');
+        const const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
         if (!res.ok) {
           throw new Error(`HTTP ${res.status}`);
         }
